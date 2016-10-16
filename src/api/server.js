@@ -6,6 +6,9 @@ const server = restify.createServer({
     name: 'Notes API'
 });
 
+//dev time only!
+server.use(restify.CORS());
+
 registerNoteRoutes(server, require('./controllers/noteController'));
 
 server.listen(port, () => {
