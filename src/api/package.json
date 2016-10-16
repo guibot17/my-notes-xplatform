@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "The API for our notes app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": "Thorsten Hans <thorsten.hans@gmail.com> (http://www.xplatform.rocks/)",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^4.1.1",
+    "restify-router": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
