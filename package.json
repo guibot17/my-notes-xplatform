@@ -1,0 +1,25 @@
+{
+  "name": "my-notes-xplatform",
+  "version": "0.0.1",
+  "description": "our cross platform sample",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "shelljs": "^0.7.4",
+    "cordova": "6.2.0"
+  },
+  "scripts": {
+    "build-web": "cd src && cd client && $(npm bin)/ng build && cd .. && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThorstenHans/my-notes-xplatform.git"
+  },
+  "keywords": [],
+  "author": "Thorsten Hans <thorsten.hans@gmail.com> (http://www.xplatform.rocks/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThorstenHans/my-notes-xplatform/issues"
+  },
+  "homepage": "https://github.com/ThorstenHans/my-notes-xplatform#readme"
+}
