@@ -5,11 +5,16 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "shelljs": "^0.7.4",
-    "cordova": "6.2.0"
+    "cordova": "6.2.0",
+    "nodemon": "^1.11.0",
+    "shelljs": "^0.7.4"
   },
   "scripts": {
-    "build-web": "cd src && cd client && $(npm bin)/ng build && cd .. && cd .."
+    "rebuild-mobile": "npm run build-web && npm run build-mobile",
+    "build-mobile": "node ./scripts/cordova.js",
+    "build-web": "cd src && cd client && $(npm bin)/ng build && cd .. && cd ..",
+    "start-mobile-ios": "cd dist && cd mobile && $(npm bin)/cordova emulate ios && cd .. && cd ..",
+    "start-mobile-android": "cd dist && cd mobile && $(npm bin)/cordova run android && cd .. && cd .."        
   },
   "repository": {
     "type": "git",

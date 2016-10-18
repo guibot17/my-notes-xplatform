@@ -8,5 +8,12 @@ import { AppModule } from './myNotes/modules/app.module';
 if (environment.production) {
   enableProdMode();
 }
+let bootstrap = () => {
+  platformBrowserDynamic().bootstrapModule(AppModule);
+};
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+if(!!window['cordova']){
+  document.addEventListener('deviceready', bootstrap);
+}else{
+  bootstrap();
+}
