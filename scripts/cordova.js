@@ -18,3 +18,4 @@ sed('-i', '</body>', '<script src="cordova.js"></script></body>', `${mobileDist}
 cd(mobileDist);
 exec(`cordova prepare`);
 exec(`cordova build`);
+sed('-i', '<script src="cordova.js"></script></body>', '</body>', `${mobileDist}/www/index.html`);

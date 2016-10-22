@@ -6,15 +6,18 @@
   "dependencies": {},
   "devDependencies": {
     "cordova": "6.2.0",
+    "electron-packager": "^8.1.0",
     "nodemon": "^1.11.0",
     "shelljs": "^0.7.4"
   },
   "scripts": {
     "rebuild-mobile": "npm run build-web && npm run build-mobile",
     "build-mobile": "node ./scripts/cordova.js",
+    "rebuild-desktop": "npm run build-web && node ./scripts/electron.js",
+    "build-desktop": "node ./scripts/electron.js",
     "build-web": "cd src && cd client && $(npm bin)/ng build && cd .. && cd ..",
     "start-mobile-ios": "cd dist && cd mobile && $(npm bin)/cordova emulate ios && cd .. && cd ..",
-    "start-mobile-android": "cd dist && cd mobile && $(npm bin)/cordova run android && cd .. && cd .."        
+    "start-mobile-android": "cd dist && cd mobile && $(npm bin)/cordova run android && cd .. && cd .."
   },
   "repository": {
     "type": "git",
